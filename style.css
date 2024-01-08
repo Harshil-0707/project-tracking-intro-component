@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    border: none;
+    outline: none;
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Barlow';
+}
+
+#container nav{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    font-family: 'Barlow Condensed';
+    padding: 62px 40px 10px 105px;
+}
+
+main{
+    overflow-x: hidden;
+}
+
+nav #nav-links{
+    margin-left: auto
+}
+
+nav #nav-links #links{
+    display: flex;
+}
+
+nav #nav-links .link:not(:last-child){
+    margin-right: 37px;
+    list-style-type: none;
+}
+
+#bg-grayish-blue{
+    top: 0;
+    right: 0;
+    width: 42%;
+    height: 53%;
+    z-index: -1;
+    border-radius: 0 0 0 65px;
+    position: absolute;
+    background-color: hsl(207, 33%, 95%);
+}
+
+.link a,
+.link a:visited{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: hsl(230, 29%, 20%);
+}
+
+#nav-links #link4,
+#nav-links #link4 a{
+    margin-left: 20px;
+    color: hsl(231, 7%, 65%);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+nav #nav-links .link:last-child{
+    list-style-position: outside;
+}
+
+main{
+    display: flex;
+    align-items: center;
+}
+
+#Call-to-actions{
+    padding: 0 0 0 105px;
+}
+
+#head,
+#demo{
+    display: flex;
+    align-items: center;
+}
+
+#new{
+    margin-right: 10px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background-color: #000;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Barlow Condensed';
+}
+
+#type,
+#demo-info{
+    font-size :14px;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    color:hsl(231, 7%, 65%);
+}
+
+h1{
+    font-size: 70px;
+    line-height: 70px;
+    margin: 20px 0 30px 0;
+    color: hsl(230, 29%, 20%);
+    font-family: 'Barlow Condensed';
+}
+
+#hero p{
+    width: 50%;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 50px;
+    font-family: 'Barlow';
+    color: hsl(230, 11%, 40%);
+}
+
+#btn{
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 26px;
+    margin-right: 16px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    color: hsl(207, 33%, 95%);
+    font-family: 'Barlow Condensed';
+    background-color: hsl(0, 100%, 68%);
+}
+
+#btn:hover{
+    cursor: pointer;
+}
+
+main #img{
+    transform: translateX(28%);
+}
+
+@media (max-width:1440px){
+    h1{
+        width: 100%;
+        font-size: 48px;
+        line-height:normal;
+    }
+    #bg-grayish-blue{
+        width: 50%;
+        height: 54%;
+    }
+    #hero p{
+        width: 76%;
+        font-size: 18px
+    }
+}
