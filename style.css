@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 *{
@@ -21,9 +22,17 @@ body{
     font-family: 'Barlow Condensed';
     padding: 62px 40px 10px 105px;
 }
+aside{
+    display: none;
+}
+#menu{
+    display: none;
+}
 
 main{
     overflow-x: hidden;
+    display: flex;
+    align-items: center;
 }
 
 nav #nav-links{
@@ -34,7 +43,8 @@ nav #nav-links #links{
     display: flex;
 }
 
-nav #nav-links .link:not(:last-child){
+nav #nav-links .link:not(:last-child),
+nav aside .mobile-links{
     margin-right: 37px;
     list-style-type: none;
 }
@@ -69,15 +79,6 @@ a:hover{
     text-decoration: underline;
 }
 
-nav #nav-links .link:last-child{
-    list-style-position: outside;
-}
-
-main{
-    display: flex;
-    align-items: center;
-}
-
 #Call-to-actions{
     padding: 0 0 0 105px;
 }
@@ -89,7 +90,7 @@ main{
 }
 
 #new{
-    margin-right: 10px;
+    margin-right: 14px;
     padding: 2px 10px;
     border-radius: 20px;
     background-color: #000;
@@ -101,8 +102,9 @@ main{
 #demo-info{
     font-size :14px;
     word-spacing: 4px;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     color:hsl(231, 7%, 65%);
+    font-family: 'Barlow Condensed';
 }
 
 h1{
@@ -119,7 +121,7 @@ h1{
     line-height: 24px;
     margin-bottom: 50px;
     font-family: 'Barlow';
-    color: hsl(230, 11%, 40%);
+    color: hsl(228, 12%, 57%);
 }
 
 #btn{
@@ -137,6 +139,7 @@ h1{
 
 #btn:hover{
     cursor: pointer;
+    background-color: hsla(0, 100%, 68%, 0.699);
 }
 
 main #img{
@@ -156,5 +159,91 @@ main #img{
     #hero p{
         width: 76%;
         font-size: 18px
+    }
+}
+
+@media (max-width:376px){
+    #container nav{
+        position: relative;
+        margin-bottom: 58px;
+        padding: 28px 30px 0 30px;
+    }
+    #close{
+        display: none;
+    }
+    #logo img{
+        width: 24px;
+    }
+    #nav-links{
+        display: none;
+    }
+    aside{
+        border-radius: 4px;
+        top: 170%;
+        width: 86%;
+        z-index: 1;
+        display: none;
+        position: absolute;
+        left: 7%;
+        text-align: center;
+        background-color: #fff;
+        filter: drop-shadow(0 2px 12px #b1b0b0);
+    }
+    aside ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav aside .mobile-links{
+        margin: 0;
+    }
+    .mobile-links .link:nth-child(odd){
+        padding: 22px 0;
+    }
+    .mobile-links .link:last-child{
+        width: 80%;
+        padding: 24px 0;
+        border-top: 1px solid hsl(240, 6%, 75%);
+    }
+    #aside .mobile-links #login a{
+        color: hsl(240, 6%, 75%);
+    }
+    main{
+        flex-direction: column-reverse;
+    }
+    #Call-to-actions{
+        padding: 0 0 0 30px;
+    }
+    #hero h1{
+        font-size: 38px;
+        line-height: 36px;
+        margin: 14px 0 10px 0;
+    }
+    #menu{
+        display: block;
+        margin-left: auto;
+    }
+    #hero p{
+        margin: 14px 0 18px 0;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    #bg-grayish-blue{
+        height: 59%;
+    }
+    main #img{
+        margin-bottom: 80px;
+    }
+    main #img img{
+        width: 136%;
+        transform: translateX(-19.5%);
+    }
+    #btn{
+        font-size: 14px;
+    }
+    #demo #demo-info{
+        font-size: 12px;
+        word-spacing: 0px;
     }
 }
